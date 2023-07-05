@@ -5,47 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Manage</title>
+  <link rel="stylesheet" href="css/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="headerNav">
       <a href="#">
         <img src="assets/images/logo.svg" alt="">
       </a>
-      <ul>
+      <ul class="navList">
         <li><a href="#">Pricing</a></li>
         <li><a href="#">Product</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Careers</a></li>
         <li><a href="#">Community</a></li>
       </ul>
-      <a href="#">Get Started</a>
-      <button>
+      <a href="#" class="getStarted desktopOnly">Get Started</a>
+      <button class="hamburgerButton">
         <img src="assets/images/icon-hamburger.svg" alt="">
       </button>
     </nav>
   </header>
   <main>
     <section class="heroSection">
-      <div class="heroText">
+      <div class="textWrapper heroText ">
         <h1>Bring everyone together to build better products.</h1>
         <p>Manage makes it simple for software teams to plan day-to-day 
         tasks while keeping the larger team goals in view.</p>
-        <a href="#">Get Started</a>
+        <a href="#" class="getStarted">Get Started</a>
       </div>
       <div>
         <img src="assets/images/illustration-intro.svg" alt="">
       </div>
     </section>
     <section class="perksSection">
-      <div class="sectionHeading">
+
+      <div class="sectionHeading textWrapper">
         <h2>What’s different about Manage?</h2>
         <p>Manage provides all the functionality your team needs, without 
-  the complexity. Our software is tailor-made for modern digital 
-  product teams.</p>
+        the complexity. Our software is tailor-made for modern digital 
+        product teams.</p>
       </div>
       <div class="perks">
         <div class="perk">
@@ -81,31 +83,37 @@
           <p>“Manage has supercharged our team’s workflow. The ability to maintain 
           visibility on larger milestones at all times keeps everyone motivated.”</p>
         </blockquote>
-        <blockquote class="testimonial">
+        <blockquote class="testimonial desktopOnly">
           <img src="assets/images/avatar-ali.png" alt="">
           <figcaption>Ali Bravo</figcaption>
           <p>“We have been able to cancel so many other subscriptions since using 
           Manage. There is no more cross-channel confusion and everyone is much 
           more focused.”</p>
         </blockquote>
-        <blockquote class="testimonial">
+        <blockquote class="testimonial desktopOnly">
           <img src="assets/images/avatar-richard.png" alt="">
           <figcaption>Richard Watts</figcaption>
           <p>“Manage allows us to provide structure and process. It keeps us organized 
             and focused. I can’t stop recommending them to everyone I talk to!”</p>
         </blockquote>
-        <blockquote class="testimonial">
+        <blockquote class="testimonial desktopOnly">
           <img src="assets/images/avatar-shanai.png" alt="">
           <figcaption>Shanai Gough</figcaption>
           <p>“Their software allows us to track, manage and collaborate on our projects 
             from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
         </blockquote>
       </div>
-      <a href="#">Get Started</a>
+      <div class="sliderDots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <a href="#" class="getStarted">Get Started</a>
     </section>
     <section class="CTA">
       <h2>Simplify how your team works today.</h2>
-      <a href="#">Get Started</a>
+      <a href="#" class="getStarted" data-type="Inverted">Get Started</a>
     </section>
   </main>
   <footer>

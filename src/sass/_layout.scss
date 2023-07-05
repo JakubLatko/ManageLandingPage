@@ -2,5 +2,235 @@
 
 body{
     font-family: 'Be Vietnam Pro', sans-serif;
+    background-image: url(../assets/images/bg-tablet-pattern.svg);
+    background-position: top -30rem;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+
+header, .heroSection, .perksSection, .testimonialsSection, .CTA{
+    padding-inline: 5vw;
+}
+
+
+////////////HEADER////////////////////
+header{
+    display: flex;
+    flex-direction: row;
+    padding-block: 2rem;
+}
+.headerNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navList{
+    display: none;
+}
+
+.desktopOnly{
+    display: none !important; 
+}
+
+.hamburgerButton{
+    border: 0;
+    background-color: transparent;
+}
+
+////////////////HERO/SECTION///////////////
+
+.heroSection{
+    display: flex;
+    flex-direction: column-reverse;
+   
+}
+
+.heroText{
+    padding-bottom: 5rem;
+}
+
+.textWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem ;
+    text-align: center;
+    
+    h1{
+        font-size: clamp(1.5rem, 10vw, 2.5rem);
+        color: $primary-500;
+        line-height: normal;
+        letter-spacing: -2px;
+    }
+    h2{
+        font-size: clamp(1.25rem, 8vw, 2rem);
+        color: $primary-500;
+        letter-spacing: -2px;
+        max-width: 12ch;
+        margin-inline:auto;
+    }
+    p{
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        color: $neutral-400;
+    }
+}
+
+.getStarted{
+    padding: 0.5em 2em;
+    background-color: $primary-600;
+    color: $neutral-600;
+    text-align: center;
+    border-radius: 100vw;
+    text-decoration: none;
+    width: fit-content;
+    margin-inline: auto;
+    box-shadow: 0px 10px 10px rgba($primary-600, 0.3);
+    &[data-type="Inverted"]{
+        background-color: $neutral-600;
+        color: $primary-600;
+        box-shadow: none;
+        font-weight: 700;
+    }
+}
+
+///////////////////////////////PERKS SECTION//////////////////////
+
+.perksSection{
+    // background-image: url(../assets/images/bg-tablet-pattern.svg);
+    // background-position: 10rem center;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+}
+
+.sectionHeading{
+    p{
+        width: 90%;
+        margin-inline: auto;
+    }
+}
+
+.perks{
+    padding-top: 3rem;
+}
+
+.perk{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: baseline;
+    grid-template-areas: 
+    "number title"
+    "paragraph paragraph";
+    .perkNumber{
+        grid-area: number;
+        background-color: $primary-600;
+        color: $neutral-600;
+        padding: .35em 1.25em;
+        border-radius: 100vw;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+    h3{
+        grid-area: title;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        background-color: rgba($primary-600, 0.1);
+        padding-block: .25em;
+        position: relative;
+        margin-left: 1rem;
+        color: $primary-500;
+        letter-spacing: -.5px;
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: rgba($primary-600, 0.1);
+            width: 2rem;
+            left: -2rem;
+            top: 0;
+            height: 100%;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: rgba($primary-600, 0.1);
+            width: 5vw;
+            right: -5vw;
+            top: 0;
+            height: 100%;
+        }
+    }
+    p{
+        padding-top: 1rem;
+        color: $neutral-400;
+        font-size: clamp(0.75rem, 4vw, 1.5rem);
+        grid-area: paragraph;
+        line-height: 1.6;
+        padding-bottom: 2rem;
+    }
+}
+
+///////////////////TESTIMONIALS//////////////////
+
+.testimonialsSection{
+    display: flex;
+    flex-direction: column;
+    padding-block: 3rem;
+    h2{
+        font-size: clamp(1.25rem, 10vw, 2rem);
+        color: $primary-500;
+        letter-spacing: -2px;
+        max-width: 12ch;
+        margin-inline:auto;
+    }
+}
+
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;
+    padding-block: 2rem;
+    img{
+        width: 4rem;
+        aspect-ratio: 1;
+        object-fit: contain;
+    }
+    figcaption{
+        color: $primary-500;
+        font-weight: 700;
+        font-size:clamp(0.75rem, 5vw, 1.5rem)
+    }
+    p{
+        color: $neutral-400;
+    }
+
+}
+
+///////////////////CTA////////////////
+.CTA{
+    background-color: $primary-600;
+    color: $neutral-600;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items:center ;
+    padding-block: 5rem;
+    background-image: url(../assets/images/bg-simplify-section-mobile.svg);
+    background-position: left center;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    gap: 2rem;
+    h2{
+        font-size:clamp(2rem, 10vw, 3rem);
+        max-width: 12ch;
+        line-height: normal;
+
+    }
+}
+
+
+//////////FOOTER///////////////////////////
+
 
