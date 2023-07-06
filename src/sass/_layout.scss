@@ -160,6 +160,38 @@ header{
     }
 }
 
+@media only screen and (min-width:1440px){
+    .heroSection{
+        flex-direction: row;
+        padding-block: 10rem;
+        
+    }
+    .textWrapper{
+        text-align: left;
+        
+        gap: 2rem;
+        h1{
+            font-size: clamp(2rem, 6vw, 3.5rem);
+        }
+        p{
+            font-size: clamp(0.75rem, 1.5vw, 1.75rem);
+            max-width: 30ch;
+        }
+        .getStarted{
+            margin-inline: 0;
+        }
+    }
+    .heroText{
+        flex-basis: 50%;
+        padding: 0;
+        margin-block: auto;
+    }
+    .heroImage{
+        flex-basis: 50%;
+    }
+}
+
+
 ///////////////////////////////PERKS SECTION//////////////////////
 
 // .perksSection{
@@ -233,6 +265,60 @@ header{
         padding-bottom: 2rem;
     }
 }
+
+@media only screen and (min-width:1440px){
+    .perksSection{
+        display: flex;
+        flex-direction: row;
+        align-items:start;
+        .textWrapper{
+            margin-block: 0;
+            text-align: left;
+            flex-basis: 50%;
+            h2{
+                font-size:clamp(1.25rem, 3.5vw,5rem);
+                margin-inline:0;
+            }
+            p{
+                font-size:clamp(.75rem, 1.25vw, 1.5rem );
+                margin-inline:0;
+            }
+        }
+    }
+    .perks{
+        flex-basis: 50%;
+        padding: 0;
+    }
+    .perk{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+        "number title"
+        "blank text";
+        gap:0 1rem ;
+        
+        .perkNumber{
+            grid-area: number;
+            font-size: clamp(.75rem, 1.5vw, 1.5rem);
+            padding: .25em 1em;
+        }
+        h3{
+            grid-area: title;
+            background-color: transparent;
+            font-size: clamp(.75rem, 1.5vw, 1.5rem);
+            margin: 0;
+            &::before, &::after{
+                display: none;
+            }
+        }
+        p{
+            grid-area: text;
+            font-size: clamp(.75rem, 1.25vw, 1.5rem);
+        }
+    }
+}
+
 
 ///////////////////TESTIMONIALS//////////////////
 
