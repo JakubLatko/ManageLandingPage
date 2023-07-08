@@ -3,8 +3,8 @@
 body{
     font-family: 'Be Vietnam Pro', sans-serif;
     background-image: url(../assets/images/bg-tablet-pattern.svg);
-    background-position: top -30rem;
-    background-size: contain;
+    background-position: top -2.5% right -100%;
+    background-size: 90%;
     background-repeat: no-repeat;
 }
 
@@ -67,8 +67,39 @@ header{
     border: 0;
     background-color: transparent;
 }
+@media only screen and (min-width:500px) and (max-width:768px){
+   .navList{
+    max-width: 600px;
+    margin-inline: auto;
+    li{
+        a{
+            font-size: clamp(1rem, 3.5vw, 1.5rem);
+        }
+    }
+}
+}
 
-@media only screen and (min-width:1440px){
+@media only screen and (min-width:768px) and (max-width:1024px){
+    header{
+        padding-block: 3rem;
+    }
+    .headerLogo{
+        width: fit-content;
+        img{
+            width: 25vw;
+        }
+    }
+}
+
+@media only screen and (min-width:1024px){
+    body{
+        background-image: 
+        url(../assets/images/bg-tablet-pattern.svg);
+        background-position: 
+        top -3rem right -10rem;
+        background-size: 60vw;
+        background-repeat: no-repeat;
+    }
     header, .heroSection, .perksSection, .testimonialsSection, .CTA, footer{
         padding-inline: 10vw;
     }
@@ -104,6 +135,8 @@ header{
         display: flex !important;
     }
 }
+
+
 
 ////////////////HERO/SECTION///////////////
 
@@ -159,6 +192,50 @@ header{
         font-weight: 700;
     }
 }
+@media only screen and (min-width:500px) and (max-width:768px){
+    .textWrapper{
+        
+        gap: 2rem;
+        h1{
+            font-size: clamp(1.5rem, 8vw, 3rem);
+        }
+        h2{
+            font-size: clamp(1.25rem, 7.5vw, 3rem);
+        }
+        p{
+            font-size: clamp(1rem, 3.5vw, 2rem);
+            max-width: 35ch;
+            margin-inline: auto;
+        }
+    }
+    .heroSection{
+        padding-block:3rem;
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .heroImage{
+        margin-inline: auto;
+    }
+    .textWrapper{
+        gap: 2rem;
+        h1{
+            font-size: clamp(2rem, 6vw, 3rem );
+            max-width: 20ch;
+            margin-inline:auto;
+        }
+        p{
+            font-size: clamp(1rem, 3vw, 1.5rem );
+            max-width: 30ch;
+            margin-inline:auto;
+        }
+        .getStarted{
+            font-size: clamp(1rem, 3vw, 1.5rem );
+        }
+    }
+}
+
 
 @media only screen and (min-width:1440px){
     .heroSection{
@@ -265,6 +342,18 @@ header{
         padding-bottom: 2rem;
     }
 }
+@media only screen and (min-width:500px) and (max-width:768px){
+    .perk{
+        padding-block: 1rem;
+        p{
+            font-size: clamp(1rem, 3vw, 2rem);
+        }
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+
+}
 
 @media only screen and (min-width:1440px){
     .perksSection{
@@ -284,6 +373,12 @@ header{
                 margin-inline:0;
             }
         }
+        background-image: 
+        url(../assets/images/bg-tablet-pattern.svg);
+        background-position: 
+        top left -100%;
+        background-size: 60vw;
+        background-repeat: no-repeat;
     }
     .perks{
         flex-basis: 50%;
@@ -332,6 +427,7 @@ header{
         letter-spacing: -2px;
         max-width: 12ch;
         margin-inline:auto;
+        padding-block-end:5rem;
     }
 }
 
@@ -342,19 +438,24 @@ header{
     align-items: center;
     justify-content:center;
     gap: 1rem;
-    padding-block: 2rem;
+    padding-block: 1rem;
+    margin-block-end: 3rem;
+    background-color: $neutral-600;
     img{
         width: 4rem;
         aspect-ratio: 1;
         object-fit: contain;
+        transform: translateY(-3rem);
     }
     figcaption{
         color: $primary-500;
         font-weight: 700;
-        font-size:clamp(0.75rem, 5vw, 1.5rem)
+        font-size:clamp(0.75rem, 5vw, 1.5rem);
+        transform: translateY(-2rem);
     }
     p{
         color: $neutral-400;
+        transform: translateY(-1rem);
     }
 
 }

@@ -14,3 +14,20 @@ hamBtn.addEventListener("click", ()=>{
         navList.setAttribute("aria-expanded", true)
     }
 })
+
+
+// const haystack = ['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]
+
+// function findNeedle(haystack) {
+//     console.log(haystack)
+//     // haystack.forEach(element => {
+//     //     console.log(element)
+        
+//     // })
+// }
+
+// findNeedle()
+
+// // if(element == "needle"){ 
+//         //     console.log(haystack.findIndex(element)) 
+//         // } 
