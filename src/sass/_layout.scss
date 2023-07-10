@@ -48,6 +48,10 @@ header{
             letter-spacing: -1px;
             text-decoration: none;
             color: $neutral-300;
+            &:focus, &:hover{
+                color: $neutral-400;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -74,6 +78,7 @@ header{
     li{
         a{
             font-size: clamp(1rem, 3.5vw, 1.5rem);
+            
         }
     }
 }
@@ -88,6 +93,10 @@ header{
         img{
             width: 25vw;
         }
+    }
+    .navList{
+        right:30vw;
+        left:30vw;
     }
 }
 
@@ -190,6 +199,16 @@ header{
         color: $primary-600;
         box-shadow: none;
         font-weight: 700;
+        &:focus, &:hover{
+            cursor: pointer;
+            color: rgba($primary-600,0.4) ;
+            background-color: $neutral-600;
+            transition: 105ms ease-in-out;
+        }
+    }
+    &:focus, &:hover{
+        cursor: pointer;
+        background-color: rgba($primary-600,0.7)
     }
 }
 @media only screen and (min-width:500px) and (max-width:768px){
@@ -214,7 +233,7 @@ header{
 }
 
 
-@media only screen and (min-width:768px) and (max-width:1024px){
+@media only screen and (min-width:768px) and (max-width:1023px){
     .heroImage{
         margin-inline: auto;
     }
@@ -243,18 +262,30 @@ header{
     .heroSection{
         display: flex;
         flex-direction: row;
+        padding-block: 2rem 5rem;
+    }
+    .heroText{
+        margin-block-start: auto;
+        .getStarted{
+            margin: 0 auto 0 0;
+        }
     }
     .textWrapper{
+        
+        flex-basis: 50%;
+        text-align: left;
         h1{
-
+            font-size:clamp(2rem, 4vw, 3.5rem);
         }
         h2{
-
+            font-size:clamp(2rem, 4vw, 3.5rem);
         }
         p{
-
+            
+            font-size:clamp(1rem, 1.5vw, 1.5rem);
+            max-width: 40ch;
         }
-        
+
     }
 }
 
@@ -373,7 +404,7 @@ header{
     }
 }
 
-@media only screen and (min-width:768px) and (max-width:1024px){
+@media only screen and (min-width:768px) and (max-width:1023px){
 .textWrapper{
     h2{
         font-size: clamp(2rem, 4.5vw, 3.5rem);
@@ -391,7 +422,9 @@ header{
 }
 }
 
-@media only screen and (min-width:1440px){
+
+
+@media only screen and (min-width:1024px){
     .perksSection{
         display: flex;
         flex-direction: row;
@@ -451,6 +484,36 @@ header{
 }
 
 
+@media only screen and (min-width:1024px) and (max-width:1439px){
+    .perksSection{
+        .textWrapper{
+            h2{
+                font-size: clamp(2rem, 4vw, 3.5rem);
+               line-break: strict;
+            }
+            p{
+                font-size: clamp(1rem, 1.25vw, 1.75rem );
+                max-width: 30ch;
+            }
+        }
+    }
+    
+    .perk{
+        max-width: clamp(500px, 60vw, 700px);
+        margin-inline: auto;
+        padding-block: 1rem;
+        .perkNumber, h3{
+            font-size: clamp(1rem, 1.75vw, 2rem);
+        }
+       
+        p{
+            font-size: clamp(1rem, 1.25vw, 1.75rem );
+        }
+    }
+    }
+    
+
+
 ///////////////////TESTIMONIALS//////////////////
 
 .testimonialsSection{
@@ -465,23 +528,67 @@ header{
         margin-inline:auto;
         padding-block-end:5rem;
     }
+    overflow: hidden;
+}
+
+.sliderControls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+    //background-color: red;
+    align-items: center;
+    padding-block: 1rem 2rem; 
+}
+.dot{
+    border-radius: 50%;
+    aspect-ratio: 1;
+    border:1px solid $primary-600;
+    width: .5rem;
+    object-fit: contain;
+    height: fit-content;
+}
+.arrow{
+    width: 2rem;
+    border-radius: 50%;
+    color: $primary-600;
+    background-color: transparent;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border: 2px solid $primary-600;
+    font-weight: 700;
+    margin-inline: 3rem;
+}
+.filledDot{
+    background-color: $primary-600;
+}
+
+
+.testimonialWrapper{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: fit-content;
+    transform: translateX(-5vw);
 }
 
 .testimonial{
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content:center;
     gap: 1rem;
-    padding-block: 1rem;
-    margin-block-end: 3rem;
+    margin-block: 3rem;
     background-color: $neutral-600;
+    width: 70vw;
+    margin-inline: 15vw;
+    padding: 1rem;
     img{
         width: 4rem;
         aspect-ratio: 1;
         object-fit: contain;
-        transform: translateY(-3rem);
+        transform: translateY(-3.5rem);
     }
     figcaption{
         color: $primary-500;
@@ -494,8 +601,11 @@ header{
         transform: translateY(-1rem);
     }
 }
+.activeSlide{
+    display: flex;
+}
 
-@media only screen and (min-width:768px) and (max-width:1024px){
+@media only screen and (min-width:768px) and (max-width:1023px){
     .testimonial{
         width: fit-content;
         padding: 2rem;
@@ -510,6 +620,42 @@ header{
         }
     }
 }
+@media only screen and (min-width:1024px) and (max-width:1439px){
+    .testimonialsSection{
+        display: flex;
+        flex-direction:column ;
+        padding-inline: 0;
+        //gap: 3rem;
+        h2{
+            font-size: clamp(1rem, 3vw, 4rem);
+        }
+        overflow: scroll;
+        padding-block: 5rem;
+    }
+    .testimonialWrapper{
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        gap: 3rem;
+        padding-inline: 30vw;
+        padding-block: 3rem;
+    }
+
+    .testimonial{
+        width: fit-content;
+        padding: 2rem;
+        //max-width: 600px;
+        margin-inline: auto;
+        p{
+            max-width: none;
+        }
+        img{
+            transform: translateY(-4rem) scale(1.25);
+
+        }
+    }
+}
+
 @media only screen and (min-width:1440px){
     .testimonialsSection{
         display: flex;
@@ -575,7 +721,7 @@ header{
     }
 }
 
-@media only screen and (min-width:768px) and (max-width:1024px){
+@media only screen and (min-width:768px) and (max-width:1023px){
 .CTA{
     gap: 3rem;
     h2{
@@ -586,6 +732,8 @@ header{
     }
 }
 }
+
+
 @media only screen and (min-width:1024px) and (max-width:1440px){
     .CTA{
         flex-direction: row;
@@ -659,6 +807,11 @@ footer{
         background-color: $primary-600;
         color: $neutral-600;
         width: 20%;
+        &:focus, &:hover{
+            color: rgba($neutral-600, 0.8);
+            cursor: pointer;
+            background-color:hsl(12, 88%, 69%) ;
+        }
     }
 }
 .footerNav{
@@ -677,6 +830,10 @@ footer{
         a{
             color:$neutral-600 ;
             text-decoration: none;
+            &:focus, &:hover{
+                color: $primary-600;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -726,9 +883,7 @@ footer{
     .copyright{
         font-size: clamp(.75rem, 1.25vw, 1.5rem);
     }
-    .socials{
-
-    }
+   
     .socialsWrapper{
         justify-content: center;
         gap: 3rem;
@@ -747,6 +902,60 @@ footer{
         }
     }
 }
+
+@media only screen and (min-width:1024px) and (max-width:1439px){
+    footer{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 1fr 1fr;
+        gap: 0 1rem;
+    }
+    .copyright{
+        grid-column: 4;
+        grid-row: 2;
+        font-size: clamp(.75rem, 1vw, 1.5rem);
+        width: fit-content;
+        margin-inline: 0;
+        margin-left: auto;
+        margin-top: auto;
+    }
+    .newsletterWrapper{
+        grid-column: 4;
+        grid-row: 1;
+        margin-left: auto;
+        width: fit-content;
+        input, button{
+            font-size: clamp(.75rem, 1.25vw, 1.5rem);
+        }
+        input{
+            width: fit-content;
+        }
+        
+    }
+    .socials{
+        grid-column: 1;
+        grid-row: 1 / span  2;
+        display: flex;
+        flex-direction: column;
+        gap: 0 ;
+        justify-content: space-between;
+        
+    }
+
+    .socialsWrapper{
+        gap: 1.5rem;
+    }
+    .footerNav{
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 2;
+        justify-content: space-around;
+        
+    }
+    .footerNavList{
+        margin-block-start: 0;
+    }
+}
+
 
 @media only screen and (min-width:1440px){
     footer{
@@ -775,9 +984,7 @@ footer{
         input{
             width: fit-content;
         }
-        button{
-
-        }
+        
     }
     .socials{
         grid-column: 1;
@@ -796,4 +1003,33 @@ footer{
     .footerNavList{
         margin-block-start: 0;
     }
+}
+
+
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; 
+	-webkit-clip-path: inset(50%) !important;
+					clip-path: inset(50%) !important;  
+	height: 1px !important;
+	overflow: hidden !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+					clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	position: static !important;
+	width: auto !important;
+	white-space: normal !important;
 }

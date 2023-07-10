@@ -15,19 +15,38 @@ hamBtn.addEventListener("click", ()=>{
     }
 })
 
+const leftArrow = document.querySelector(".leftArrow")
+const rightArrow = document.querySelector(".rightArrow")
+const testimonialsWrapper = document.querySelector(".testimonialsWrapper")
+  
+const testimonialsNode = document.querySelectorAll("testimonial")
+const testimonials = testimonials.from(testimonialsNode)
+console.log(testimonials)
 
-// const haystack = ['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]
+let index = 0
 
-// function findNeedle(haystack) {
-//     console.log(haystack)
-//     // haystack.forEach(element => {
+
+
+//let array = [1, 2, 3]
+
+// leftArrow.addEventListener("click", ()=>{
+//     index = index - 1
+//     // testimonials.forEach(element => {
 //     //     console.log(element)
+//     //     // element.classList.remove("activeSlide")
+//     //     // element[index].classList.add("activeSlide")
+//     // });
+// })
+
+// rightArrow.addEventListener("click", ()=>{
+//     console.log(testimonials[1])
+//     index = index + 1
+//     // for (let i = 0; index < testimonials.length; i++) {
+//     //     console.log(testimonials[i])
         
-//     // })
-// }
+//     // }
+// })
 
-// findNeedle()
-
-// // if(element == "needle"){ 
-//         //     console.log(haystack.findIndex(element)) 
-//         // } 
+// // array.forEach(element => {
+// //     console.log(element)
+// // });
