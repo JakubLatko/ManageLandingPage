@@ -17,36 +17,41 @@ hamBtn.addEventListener("click", ()=>{
 
 const leftArrow = document.querySelector(".leftArrow")
 const rightArrow = document.querySelector(".rightArrow")
-const testimonialsWrapper = document.querySelector(".testimonialsWrapper")
+const dots = document.querySelectorAll(".dot")
   
-const testimonialsNode = document.querySelectorAll("testimonial")
-const testimonials = testimonials.from(testimonialsNode)
-console.log(testimonials)
+const testimonialsNode = document.querySelectorAll(".testimonial")
 
 let index = 0
 
 
+leftArrow.addEventListener("click", ()=>{
+    index = index - 1
+    if(index < 0) {
+        index = testimonialsNode.length  - 1
+    }
+    testimonialsNode.forEach(element => {
+        element.classList.remove("activeSlide")
+    })
+    testimonialsNode[index].classList.add("activeSlide")
+    dots.forEach(element => {
+        element.classList.remove("filledDot")
+    })
+    dots[index].classList.add("filledDot")
+})
 
-//let array = [1, 2, 3]
+rightArrow.addEventListener("click", ()=>{
+    index = index + 1
+    if(index > testimonialsNode.length - 1) {
+        index = 0
+    }
+    testimonialsNode.forEach(element => {
+        element.classList.remove("activeSlide")
+    })
+    testimonialsNode[index].classList.add("activeSlide")
 
-// leftArrow.addEventListener("click", ()=>{
-//     index = index - 1
-//     // testimonials.forEach(element => {
-//     //     console.log(element)
-//     //     // element.classList.remove("activeSlide")
-//     //     // element[index].classList.add("activeSlide")
-//     // });
-// })
-
-// rightArrow.addEventListener("click", ()=>{
-//     console.log(testimonials[1])
-//     index = index + 1
-//     // for (let i = 0; index < testimonials.length; i++) {
-//     //     console.log(testimonials[i])
-        
-//     // }
-// })
-
-// // array.forEach(element => {
-// //     console.log(element)
-// // });
+    dots.forEach(element => {
+        element.classList.remove("filledDot")
+    })
+    dots[index].classList.add("filledDot")
+    
+})

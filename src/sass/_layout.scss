@@ -599,6 +599,7 @@ header{
     p{
         color: $neutral-400;
         transform: translateY(-1rem);
+        max-width: 30ch;
     }
 }
 .activeSlide{
@@ -606,26 +607,39 @@ header{
 }
 
 @media only screen and (min-width:768px) and (max-width:1023px){
+    .testimonialsSectionP{
+        padding-inline: 10vw;
+        
+    }
+    .testimonialWrapper{
+        display: flex;
+        width: 100%;
+        margin-inline: auto;
+        transform: none;
+    }
     .testimonial{
-        width: fit-content;
+        width: max-content;
         padding: 2rem;
-        max-width: 600px;
+        max-width: 800px;
         margin-inline: auto;
         p{
-            max-width: 30ch;
+            max-width: 45ch;
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
         }
         img{
-            transform: translateY(-4rem) scale(1.25);
+            transform: translateY(-4rem) scale(1.5);
 
         }
     }
 }
 @media only screen and (min-width:1024px) and (max-width:1439px){
     .testimonialsSection{
+        align-items: center;
+        justify-content: center;
         display: flex;
         flex-direction:column ;
         padding-inline: 0;
-        //gap: 3rem;
+       // padding-inline: 10vw;
         h2{
             font-size: clamp(1rem, 3vw, 4rem);
         }
@@ -633,18 +647,20 @@ header{
         padding-block: 5rem;
     }
     .testimonialWrapper{
+        width: 100%;
         display: flex;
         flex-direction: row;
-        overflow: scroll;
-        gap: 3rem;
+        // overflow: scroll;
+        // gap: 3rem;
+        margin-inline: auto;
         padding-inline: 30vw;
         padding-block: 3rem;
+
     }
 
     .testimonial{
         width: fit-content;
         padding: 2rem;
-        //max-width: 600px;
         margin-inline: auto;
         p{
             max-width: none;
